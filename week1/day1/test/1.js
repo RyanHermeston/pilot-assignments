@@ -4,7 +4,7 @@ var sinonChai = require('sinon-chai');
 var expect = chai.expect;
 var mocha = require('mocha');
 var triangle = require('../1');
-var console = {log: args => args}
+var console = require('../lib/consolelog.js');
 
 chai.use(sinonChai);
 
@@ -19,14 +19,11 @@ describe('Create a triangle 7 rows deep', function() {
   });
 
   it('should be a 7-row deep triangle', function() {
-    var solutionTriangle = '#\n##\n###\n####\n#####\n######\n#######'
+    var solutionTriangle = ["#","##","###","####","#####","######","#######"];
 
     triangle();
-    expect(console.log).to.be.calledWithExactly(solutionTriangle);
-  });
-
-  it('should only call console.log once', function() {
-    triangle();
-    expect(console.log).to.be.calledOnce;
+    solutionTriangle.forEach((value, index) => {
+      expect(console.log.getCall(index).returned(sinon.match.same(value)))
+    })
   });
 });

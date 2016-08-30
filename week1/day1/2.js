@@ -1,4 +1,4 @@
-var console = {log: args => args}
+var console = require('./lib/consolelog.js');
 
 module.exports = function fizzBuzz() {
   for(var i = 1;i<=100;i++)
