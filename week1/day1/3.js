@@ -8,7 +8,7 @@ for(var i =0;i<size;i++){
   for(var j = 0;j<size/2;j++){
     str+='#'+" ";
   }str+="\n";
-  if(i%2==0)
+  if(i%2===0)
     str+=" ";
 }
 console.log(str);

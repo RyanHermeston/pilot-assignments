@@ -7,7 +7,7 @@ module.exports = function triangle() {
   str+='#';
   console.log(str+"Str length: "+ str.length);
 }*/
-for(var j = "";j.length<8;j+='#')
+for(var j = '';j.length<8;j+='#')
 {
   console.log(j);
 }
