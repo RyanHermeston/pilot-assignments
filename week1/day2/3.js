@@ -5,7 +5,7 @@ module.exports = function prime(n){
   return false;
   if(n === 2 || n === 3 || n === 5)
   return true;
-  if(n % 5 === 0 && n % 2 ===0)
+  if(n % 5 === 0 && n % 2 === 0)
   return false;
   if(n % 2 === 0 )
   return false;
