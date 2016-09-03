@@ -1,12 +1,10 @@
 
 module.exports = function prime(n){
 
-  if(n === 0 || n === 1 || n < 0)
+  if(n <= 1 )
   return false;
   if( n === 2 || n === 3 )
   return true;
-  if(n % 5 === 0 && n % 2 === 0)
-  return false;
   if(n % 2 === 0 )
   return false;
   else {
