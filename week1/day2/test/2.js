@@ -41,6 +41,16 @@ describe ('Returns whether a number is prime (loops)', function() {
     var result = prime(2);
     expect(result).to.equal(solution);
   })
+  it('65 should return false',function(){
+    var solution = false;
+    var result = prime(65);
+    expect(result).to.equal(solution);
+  })
+  it('49 should return false', function(){
+    var solution = false;
+    var result = prime(49);
+    expect(result).to.equal(solution);
+  })
   it('509 should return true', function(){
     var solution = true;
 
